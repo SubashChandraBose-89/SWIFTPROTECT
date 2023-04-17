@@ -1,4 +1,4 @@
-
+import pytest
 from selenium import webdriver
 from selenium.webdriver.support.wait import WebDriverWait
 from PageObjects.Swift_FieldInterview import SwiftFieldInterview
@@ -13,6 +13,7 @@ class Test_FieldInterview_TC:
     password = ReadConfig.getPassword()
     logger = LogGenerator.logenerator()
 
+    @pytest.mark.sanity
     def test_fieldInterview(self):
         self.driver = webdriver.Chrome()
         self.driver.get(self.baseURL)
@@ -119,6 +120,7 @@ class Test_FieldInterview_TC:
         self.FI.setFiFinalButSave()
         self.FI.setFiSuccessMsg()
         print("Data's Saved")
+        self.driver.close()
 
 
 

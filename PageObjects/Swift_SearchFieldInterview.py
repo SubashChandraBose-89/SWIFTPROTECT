@@ -1,12 +1,13 @@
 import time
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support import expected_conditions as EC
+from selenium import webdriver
 
 
 class SwiftSearchFI:
     report_xpath = "//a[contains(text(), 'Report Created')][1]"
     fi_details_xpath = "//a[contains(text(), 'Field Interview Details')]"
-    screenshot_1 = r"C:\Users\sudha\PycharmProjects\SWIFT PROTECT HYBRID\Screenshots\FieldInterviewImage.png"
+    screenshot_1 = r"C:\Users\sudha\PycharmProjects\SWIFT PROTECT HYBRID\Screenshots\SubjectDetailsImage.png"
     subject_details_xpath = "//a[contains(text(), 'Subject Details')]"
     name_xpath = "//a[contains(text(), 'Anderson')]"
     screenshot_2 = r"C:\Users\sudha\PycharmProjects\SWIFT PROTECT HYBRID\Screenshots\SubjectDetailsImage.png"

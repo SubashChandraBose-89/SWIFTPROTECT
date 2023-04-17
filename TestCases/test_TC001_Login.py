@@ -11,6 +11,7 @@ class Test_Login_TC:
     password = ReadConfig.getPassword()
     logger = LogGenerator.logenerator()
 
+    @pytest.mark.sanity
     def test_login(self):
         self.driver = webdriver.Chrome()
         self.logger.info("SWIFT PROTECT -> LOGIN TEST INITIATED")
@@ -31,3 +32,5 @@ class Test_Login_TC:
         else:
             self.logger.error("SWIFT PROTECT -> LOGIN FUNCTION FAILED")
             assert False
+
+

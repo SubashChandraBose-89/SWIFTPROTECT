@@ -1,3 +1,4 @@
+import pytest
 from selenium import webdriver
 from selenium.webdriver.support.wait import WebDriverWait
 from PageObjects.Swift_FieldInterview import SwiftFieldInterview
@@ -13,6 +14,7 @@ class Test_SearchFieldInterview:
     password = ReadConfig.getPassword()
     logger = LogGenerator.logenerator()
 
+    @pytest.mark.sanity
     def test_searchFieldInterview(self):
         self.driver = webdriver.Chrome()
         self.driver.get(self.baseURL)
@@ -47,4 +49,4 @@ class Test_SearchFieldInterview:
         self.SFI.takeScreenshotVehicleDetails()
         print("Test Data's Successfully Stored and Has being Captured as Screenshot")
         self.logger.info("SWIFT PROTECT -> TEST DATA SUCCESSFULLY CAPTURED AND STORED")
-
+        self.driver.close()
