@@ -17,7 +17,6 @@ class Test_SearchFieldInterview:
     password = ReadConfig.getPassword()
     logger = LogGenerator.logenerator()
 
-    @pytest.mark.sanity
     def test_TC004_DeleteTest(self):
         self.driver = webdriver.Chrome()
         self.driver.get(self.baseURL)
